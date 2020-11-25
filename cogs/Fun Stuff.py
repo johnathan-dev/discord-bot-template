@@ -14,7 +14,7 @@ from datetime import datetime
 # For downloading stuff via http request
 import requests
 
-# A module made by me specifically for MonkeBot
+# Image altering module
 import simpImage as sI
 
 class Fun_Stuff(commands.Cog):
