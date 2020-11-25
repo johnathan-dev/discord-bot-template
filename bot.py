@@ -25,6 +25,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 intents = discord.Intents(messages=True, guilds=True)
 
 name = "YOUR_BOT_NAME"
+default_prefix = "YOUR_BOT_PREFIX"
 
 # Gets a guild's custom prefix
 def get_prefix(client, message):
@@ -38,7 +39,7 @@ def prefix_check(guild):
         prefixes = json.load(f)
 
     if not str(guild.id) in prefixes:
-        prefixes[str(guild.id)] = "~"
+        prefixes[str(guild.id)] = default_prefix
 
     with open("prefixes.json", "w") as f:
         json.dump(prefixes, f, indent=4)
